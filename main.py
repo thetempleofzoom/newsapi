@@ -2,12 +2,13 @@ import requests
 from sendemail import send_email
 from datetime import date, timedelta
 
-stock='chatgpt'
+keyword='bitcoin'
 fromdate = date.today()
 fromdate = str(fromdate- timedelta(days=1))
 
 
-url = f'https://newsapi.org/v2/everything?q={stock}' \
+
+url = f'https://newsapi.org/v2/everything?q={keyword}' \
     f'&from={fromdate}' \
       '&sortBy=publishedAt'\
     '&apiKey=297dd2fa073043748f2f8616c02d8204' \
